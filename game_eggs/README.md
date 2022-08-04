@@ -71,6 +71,7 @@
   * [NanoLimbo](minecraft/java/nanolimbo)
   * [Paper](minecraft/java/paper)
   * [Purpur](minecraft/java/purpur)
+  * [Quilt](minecraft/java/quilt)
   * [Spigot](minecraft/java/spigot)
   * [SpongeForge](minecraft/java/spongeforge)
   * [SpongeVanilla](minecraft/java/spongevanilla)

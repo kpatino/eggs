@@ -18,6 +18,11 @@ A lightweight, fast and extensible game server for Minecraft
 [Fabric Website](https://fabricmc.net)
 Fabric is a lightweight, experimental modding toolchain for Minecraft.
 
+## [Quilt](quilt)
+
+[Quilt Website](https://quiltmc.org/)
+Quilt is a modding toolchain developed primarily for Minecraft that has been forked from The Fabric Project.
+
 ## [Feather](feather)
 
 [Feather GitHub](https://github.com/feather-rs/feather)

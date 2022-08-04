@@ -172,6 +172,7 @@ If you are reading this it looks like you are looking to add an egg to your serv
   * [NanoLimbo](game_eggs/minecraft/java/nanolimbo)
   * [Paper](game_eggs/minecraft/java/paper)
   * [Purpur](game_eggs/minecraft/java/purpur)
+  * [Quilt](game_eggs/minecraft/java/quilt)
   * [Spigot](game_eggs/minecraft/java/spigot)
   * [SpongeForge](game_eggs/minecraft/java/spongeforge)
   * [SpongeVanilla](game_eggs/minecraft/java/spongevanilla)
