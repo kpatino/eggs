@@ -4,9 +4,9 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2023-04-11T10:05:13+02:00",
+    "exported_at": "2023-04-25T20:50:59+00:00",
     "name": "Purpur",
-    "author": "purpur@birdflop.com",
+    "author": "kevin@kevinpatino.com",
     "description": "A drop-in replacement for Paper servers designed for configurability, and new fun and exciting gameplay features.",
     "features": [
         "eula",
@@ -14,17 +14,20 @@
         "pid_limit"
     ],
     "docker_images": {
-        "ghcr.io\/pterodactyl\/yolks:java_17": "ghcr.io\/pterodactyl\/yolks:java_17",
-        "ghcr.io\/pterodactyl\/yolks:java_16": "ghcr.io\/pterodactyl\/yolks:java_16",
-        "ghcr.io\/pterodactyl\/yolks:java_11": "ghcr.io\/pterodactyl\/yolks:java_11",
-        "ghcr.io\/pterodactyl\/yolks:java_8": "ghcr.io\/pterodactyl\/yolks:java_8"
+        "Java 17": "ghcr.io\/pterodactyl\/yolks:java_17",
+        "Java 17 Temurin": "ghcr.io\/kpatino\/images:java-17-temurin",
+        "Java 16": "ghcr.io\/pterodactyl\/yolks:java_16",
+        "Java 11": "ghcr.io\/pterodactyl\/yolks:java_11",
+        "Java 11 Temurin": "ghcr.io\/kpatino\/images:java-11-temurin",
+        "Java 8": "ghcr.io\/pterodactyl\/yolks:java_8",
+        "Java 8 Temurin": "ghcr.io\/kpatino\/images:java-17-temurin"
     },
     "file_denylist": [],
-    "startup": "java --add-modules=jdk.incubator.vector -Xms128M -Xmx{{SERVER_MEMORY}}M -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}",
+    "startup": "java --add-modules=jdk.incubator.vector -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar {{SERVER_JARFILE}}",
     "config": {
-        "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"server-port\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
-        "startup": "{\r\n    \"done\": \")! For help, type \"\r\n}",
-        "logs": "{}",
+        "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"server-port\": \"{{server.build.default.port}}\",\r\n            \"query.port\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
+        "startup": "{\r\n    \"done\": \")! For help, type \",\r\n    \"userInteraction\": [\r\n        \"Go to eula.txt for more info.\"\r\n    ]\r\n}",
+        "logs": "{\r\n    \"custom\": false,\r\n    \"location\": \"logs\/latest.log\"\r\n}",
         "stop": "stop"
     },
     "scripts": {
@@ -47,7 +50,7 @@
         },
         {
             "name": "Server Jar File",
-            "description": "The name of the .jar file to run the server with.",
+            "description": "The name of the server jarfile to run the server with.",
             "env_variable": "SERVER_JARFILE",
             "default_value": "server.jar",
             "user_viewable": true,
